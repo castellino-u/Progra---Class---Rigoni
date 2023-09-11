@@ -15,14 +15,19 @@ if (dia_sem in dias_sem_tupla):
     if (num_dia >0) and (num_dia < 32):
         if (mes > 0) and (mes < 13):
             if (dia_sem =="lunes") or (dia_sem == "martes") or (dia_sem == "miercoles"):
-                aprobados= int(input("Ingrese la cantidad de aprobados: "))
-                desaprobados= int(input("Ingrese la cantidad de desaprobados: "))
-                procentaje_aprobados = (aprobados * 100)/ (aprobados + desaprobados)
-                print(" el porcentaje de aprobados es: ",procentaje_aprobados)
+                test= input("¿Hubieron examenes?: Ingrese Si o No. ")
+                test = test.lower()
+                if test == "si":
+                     aprobados= int(input("Ingrese la cantidad de aprobados: "))
+                     desaprobados= int(input("Ingrese la cantidad de desaprobados: "))
+                     procentaje_aprobados = (aprobados * 100)/ (aprobados + desaprobados)
+                     print(" el porcentaje de aprobados es: ",procentaje_aprobados)
             elif dia_sem == "jueves": 
-                asistencia = int(input("Ingrese el porcentaje de asistencia a clase"))   
+                asistencia = int(input("Ingrese el porcentaje de asistencia a clase: "))   
                 if asistencia >= 50:
                     print("Asistio la mayoria")
+                else: 
+                    print("No asistió la mayoria. ")
             elif dia_sem == "viernes":
                 if (mes == 1) or (mes == 7):
                     if dia_sem == 1:
