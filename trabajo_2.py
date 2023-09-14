@@ -198,8 +198,8 @@ else:
 #Ejercicio 14
 
 print("Ingresar los coeficientes de una ecuacion de primer grado ax + b = 0")
-a=int(input("a="))
-b=input("b=")
+a=int(input("a: "))
+b=int(input("b: "))
 
 
 if a==0 and b!=0:
